@@ -1,0 +1,23 @@
+version: "3"
+services:
+  frontend:
+    container_name: aot-client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: joefstack/aot-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/usr/src/app
+  backend:
+    container_name: aot-server
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: joefstack/aot-backend
+    ports:
+      - "5000:5000"
+      - "7575:7575"
+    volumes:
+      - ./:/usr/src/app

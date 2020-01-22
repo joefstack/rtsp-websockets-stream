@@ -1,0 +1,21 @@
+{
+  "name": "aot-sockets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "node server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.0.2",
+    "node-media-server": "^2.1.4",
+    "node-rtsp-stream-es6": "^1.0.7",
+    "ws": "^7.2.1"
+  }
+}
